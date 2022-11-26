@@ -32,10 +32,10 @@ const Movie = ({ movie }) => {
           <h3>{movie.title}</h3>
         </div>
         <div className="movie-footer">
-          <a href="#" className="trailer-btn">
+          <span className="trailer-btn">
             <BiPlay />
             <span>Trailer</span>
-          </a>
+          </span>
           <button type="button" onClick={handleShow} className="movie-modal">
             <BiInfoCircle />
           </button>
@@ -60,10 +60,10 @@ const Movie = ({ movie }) => {
                     <span>{movie.vote_average}</span>
                   </div>
                   <p>{movie.overview}</p>
-                  <a href="#" className="trailer-btn">
+                  <span className="trailer-btn">
                     <BiPlay />
                     <span>Trailer</span>
-                  </a>
+                  </span>
                 </div>
               </div>
             </Modal.Body>

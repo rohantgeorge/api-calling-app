@@ -11,7 +11,7 @@ const Filter = ({ setActiveGenre, activeGenre, setFiltered, popular }) => {
       movie.genre_ids.includes(activeGenre)
     );
     setFiltered(filtered);
-  }, [activeGenre]);
+  }, [activeGenre, popular, setFiltered]);
 
   return (
     <>
@@ -32,7 +32,7 @@ const Filter = ({ setActiveGenre, activeGenre, setFiltered, popular }) => {
           className={activeGenre === 28 ? "active" : ""}
           onClick={() => setActiveGenre(28)}
         >
-          Action 
+          Action
         </button>
       </div>
     </>
