@@ -15,11 +15,21 @@ body {
   margin: 0;
 }
 
+/* .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+} */
+
 header {
   background-color: #373b69;
+
+  padding: 1rem;
+}
+
+header .container {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem;
 }
 
 .search {
@@ -42,18 +52,23 @@ header {
 }
 
 #main {
+  padding: 2rem 0;
+  background-color: #000;
+}
+
+#main .filter-buttons {
+  margin-bottom: 2rem;
+}
+
+#main .popular-movies {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 100%;
-  align-items: center;
-  justify-items: center;
-  grid-gap: 30px;
-  /* max-width: 1100px;
-  margin: 0 auto; */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 1.2rem;
 }
 
 .movie {
-  background-color: #373b69;
+  background-color: #1f1f1f;
   border-radius: 3px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -70,51 +85,129 @@ header {
 .movie-info {
   color: #eee;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 1rem 1rem;
+  justify-content: center;
+  padding: 1rem 1.2rem;
   letter-spacing: 0.5px;
+}
+
+.movie-info > div {
+  width: 100%;
+}
+
+.movie-info .title {
+  min-height: 60px;
+  margin-top: 10px;
 }
 
 .movie-info h3 {
   margin: 0;
+  font-size: 16px;
 }
 
-.movie-info span {
-  background-color: #22254b;
-  border-radius: 3px;
+.filter-container button {
+  margin-right: 2rem;
+  min-width: 5rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(255, 255, 255);
+  background: none;
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
   font-weight: bold;
-  padding: 0.25rem 0.5rem;
-}
-.movie-info span.green {
-  color: rgb(39, 189, 39);
+  cursor: pointer;
 }
 
-.movie-info span.orange {
-  color: orange;
+button.active {
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
-.movie-info span.red {
-  color: rgb(189, 42, 42);
+.yellow {
+  color: gold;
 }
 
-.overview {
-  background-color: #fff;
-  padding: 2rem;
-  position: absolute;
-  max-height: 100%;
-  overflow: auto;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  transform: translateY(101%);
-  transition: transform 0.3s ease-in;
+.rating {
+  display: flex;
+  align-items: center;
 }
 
-.overview h3 {
-  margin-top: 0;
+.rating span {
+  display: inline-block;
+  margin-left: 5px;
 }
 
-.movie:hover .overview {
-  transform: translateY(0);
+.movie-footer {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.trailer-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 120px;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.trailer-btn svg {
+  font-size: 26px;
+}
+
+.movie-modal {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  outline: none;
+  display: flex;
+}
+
+.trailer-btn:hover,
+.movie-modal:hover {
+  color: rgba(255, 255, 255, 0.77);
+}
+
+#movieModal {
+  max-width: 650px;
+  border-color: #1f1f1f;
+}
+
+#movieModal .movie-modal-header {
+  display: flex;
+  gap: 30px;
+}
+
+#movieModal .movie-modal-header .img-container {
+  width: 180px;
+}
+
+#movieModal .movie-modal-header .info-container {
+  width: calc(100% - 130px);
+}
+
+#movieModal .modal-body {
+  background-color: #1f1f1f;
+  border-radius: 0.5rem;
+}
+
+#movieModal .trailer-btn {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  align-items: center;
+  background: #000;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+#movieModal .trailer-btn:hover {
+  background-color: #1f1f1f;
 }
