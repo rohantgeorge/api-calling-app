@@ -52,8 +52,8 @@ header .container {
 }
 
 .modal-content {
-  background-color: #000;
-  border: none;
+  background-color: #000 !important;
+  border: none !important;
 }
 
 #main {
@@ -195,9 +195,18 @@ button.active {
   width: calc(100% - 130px);
 }
 
+#movieModal .modal-header {
+  background-color: #1f1f1f;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
 #movieModal .modal-body {
   background-color: #1f1f1f;
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+#movieModal .btn-close {
+  color: #fff;
 }
 
 #movieModal .trailer-btn {

@@ -40,7 +40,12 @@ const Movie = ({ movie }) => {
             <BiInfoCircle />
           </button>
           <Modal id="movieModal" show={show} onHide={handleClose}>
-            <Modal.Body closebutton>
+            <Modal.Header closeButton>
+              <Modal.Title>
+                <h2 className="text-white">{movie.title}</h2>
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
               <div className="movie-modal-header">
                 <div className="img-container">
                   <img
@@ -52,9 +57,7 @@ const Movie = ({ movie }) => {
                   />
                 </div>
                 <div className="info-container text-white">
-                  <h2>
-                    {movie.title} 
-                  </h2>
+                  <h2>{movie.title}</h2>
                   <div className="rating">
                     <BsFillStarFill className="yellow" />
                     <span>{movie.vote_average}</span>
