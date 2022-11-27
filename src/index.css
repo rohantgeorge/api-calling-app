@@ -208,6 +208,9 @@ button.active {
 #movieModal .btn-close {
   color: #fff;
   position: relative;
+  background: transparent
+    url("data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23fff%27><path d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/></svg>")
+    center/1em auto no-repeat;
 }
 
 #movieModal .trailer-btn {
@@ -227,20 +230,6 @@ button.active {
 
 #movieModal .trailer-btn:hover {
   background-color: #1f1f1f;
-}
-
-#movieModal .btn-close:before {
-  content: "x";
-  color: #000;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 0;
 }
 
 @media only screen and (max-width: 500px) {
