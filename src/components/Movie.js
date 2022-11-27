@@ -1,7 +1,7 @@
 import { Modal } from "react-bootstrap";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { BiPlay, BiInfoCircle, BiChevronRight } from "react-icons/bi";
+import { BiPlay, BiInfoCircle } from "react-icons/bi";
 import { BsFillStarFill } from "react-icons/bs";
 
 const Movie = ({ movie }) => {
@@ -53,7 +53,7 @@ const Movie = ({ movie }) => {
                 </div>
                 <div className="info-container text-white">
                   <h2>
-                    {movie.title} <BiChevronRight />
+                    {movie.title} 
                   </h2>
                   <div className="rating">
                     <BsFillStarFill className="yellow" />
