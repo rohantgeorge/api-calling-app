@@ -213,3 +213,18 @@ button.active {
 #movieModal .trailer-btn:hover {
   background-color: #1f1f1f;
 }
+
+@media only screen and (max-width: 500px) {
+  .movie-info .title {
+    min-height: 20px;
+  }
+
+  #movieModal .movie-modal-header {
+    flex-wrap: wrap;
+  }
+
+  #movieModal .movie-modal-header .img-container,
+  #movieModal .movie-modal-header .info-container {
+    width: 100%;
+  }
+}
