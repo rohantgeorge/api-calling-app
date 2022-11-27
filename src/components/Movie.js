@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BiPlay, BiInfoCircle } from "react-icons/bi";
 import { BsFillStarFill } from "react-icons/bs";
 
+
 const Movie = ({ movie }) => {
   const [show, setShow] = useState(false);
 
