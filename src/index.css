@@ -51,6 +51,11 @@ header .container {
   outline: none;
 }
 
+.modal-content {
+  background-color: #000;
+  border: none;
+}
+
 #main {
   padding: 2rem 0;
   background-color: #000;
